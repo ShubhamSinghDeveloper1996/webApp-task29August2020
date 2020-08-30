@@ -1,7 +1,7 @@
 <div class="filter-content">
-  <h3>Filters</h3>
+  <h3 class="filter">Filters</h3>
   <div>
-    <button>Launch Year</button>
+    <button class="heading-btn">Launch Year</button>
     <table class="filter-table">
 
       <tr *ngFor="let year of launchYears; index as i;let even = even;">
@@ -11,9 +11,9 @@
             (click)="filter_launchYearData(launchYear.value)">{{launchYears[i+1]}}</button></td>
       </tr>
     </table>
-    <br><br>
+    <!-- <br><br> -->
 
-    <button>Successful Launch</button>
+    <button class="heading-btn">Successful Launch</button>
     <table class="filter-table">
       <tr>
         <td><button value="true" #succLaunch (click)="filter_SuccessfulLaunchData(succLaunch.value)">True</button></td>
@@ -21,9 +21,9 @@
         </td>
       </tr>
     </table>
-    <br><br>
+    <!-- <br><br> -->
 
-    <button>Successful Landing</button>
+    <button class="heading-btn">Successful Landing</button>
     <table class="filter-table">
       <tr>
         <td><button value="true" #succLanding (click)="filter_SuccessfulLandingData(succLanding.value)">True</button>
