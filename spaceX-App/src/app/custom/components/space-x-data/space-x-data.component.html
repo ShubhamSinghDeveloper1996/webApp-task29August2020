@@ -1,0 +1,33 @@
+<div class="noErrorFound" *ngIf="!this.spaceX.errorFound">
+  <div class="dataFound" *ngIf="this.spaceX.dataFound">
+    <div class="card"  *ngFor="let spaceX of this.spaceX.spaceXCompleteData; index as i" >
+      <div class="card-content">
+        <div class="img">
+          <img src="{{spaceX.links.mission_patch_small}}" alt="No Image Found">
+        </div>
+        <div class="other-data">
+          <p class="heading">{{spaceX.mission_name}} #{{i+1}}</p>
+          <br>
+          <p class="heading">Mission Ids:</p>
+          <div class="mission-id">
+            <ul *ngFor="let id of spaceX.mission_id">
+              <li>{{id}}</li>
+            </ul>
+          </div>
+          <p class="heading">Launch Year: <span>{{spaceX.launch_year}}</span></p>
+          <p class="heading">Successful Launch: <span>{{spaceX.launch_success}}</span></p>
+          <p class="heading">Successful Landing: <span>{{spaceX.rocket.first_stage.cores.land_success}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="noResultFound" *ngIf="!this.spaceX.dataFound">
+    <h2>No Data Found</h2>
+  </div>
+
+</div>
+
+<div class="errorFound" *ngIf="this.spaceX.errorFound">
+  <h2>{{this.spaceX.errorMessage}}</h2>
+</div>
