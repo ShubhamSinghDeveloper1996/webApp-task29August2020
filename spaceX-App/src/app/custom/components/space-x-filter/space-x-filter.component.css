@@ -32,3 +32,29 @@ td{
     margin: 10px 0 0 20px;
     border-radius: 10px;
 }
+
+/* ----------------------------------------------------Media Query CSS Code -- Start------------------------------------------------------------------------------ */
+@media (max-width: 700px){
+    .filter-content{
+        display: block;
+        width: 100%;
+        position: static;
+        border: none;
+        background: whitesmoke;
+    }
+    .filter{
+        font-size: 20px;
+    }
+    table{
+        width: 100%;
+        margin: 3px 0 3px 04px
+    }
+    .complete-filter-data{
+        width: 100%;
+        padding: 10px 0 0 20px;
+    }
+    .filter-content .heading-btn{
+        margin: 5px 0 0 55px;
+    }
+}
+/* ----------------------------------------------------Media Query CSS Code -- end------------------------------------------------------------------------------ */

@@ -1,15 +1,15 @@
 .wrapper{
     width: 100%;
-    /* height: 100vh; */
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 .main-content{
     width: 100%;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 100vh;
+    height:calc(100vh - 70px);
     overflow: auto;
 }
 .space-X-filter{
@@ -23,29 +23,48 @@
     position: absolute;
     top: 0;
     left: 13%;
+    min-height: 300px;
+    max-height: 300px;
 }
-/* .app-footer{
-    position: absolute;
+.app-footer{
     bottom: 0;
     left: 0;
-} */
+    position: fixed;
+    width: 100%;
+    height: 30px;
+}
 
 .app-header{
     margin-left: 10px;
     position: sticky;
     top: 0;
+    width: 100%;
+    height: 25px;
 }
-/* ----------------------------------Media Query CSS------------------------------------------------------------------------- */
+/* ---------------------------------------------Media Query CSS Code -- Start------------------------------------------------------------------------------ */
 
 @media (max-width: 700px){
-
+    .space-X-filter{
+        width: 100%;
+        display: block;
+        position: static;
+        margin: 0;
+    }
+    .space-X-data{
+        top: 450px;
+        width: 100%;
+        display: block;
+        left: 0;
+    }
 }
-@media (max-width: 1024px), (min-width: 700px) {
-
+/* @media (max-width: 1024px), (min-width: 700px) {
+    
 }
 @media (max-width: 1440px), (min-width: 1024px) {
 
 }
 @media (min-width: 1440px) {
 
-}
+} */
+
+/* ---------------------------------------------Media Query CSS Code -- end------------------------------------------------------------------------------ */
