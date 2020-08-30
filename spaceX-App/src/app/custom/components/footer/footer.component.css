@@ -1,8 +1,15 @@
 /* Footer Css Code */
 
-h3{
-    text-align: center;
+h3 {
+  text-align: center;
 }
-h3 span{
-    font-weight: normal;
+
+h3 span {
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 319px) {
+  .footer-heading h3 {
+    font-size: 15px;
+  }
 }

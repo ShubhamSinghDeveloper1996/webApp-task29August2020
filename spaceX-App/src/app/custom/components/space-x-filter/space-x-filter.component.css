@@ -1,62 +1,106 @@
-.filter-content{
-    width: 100%;
-    height: 450px;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid grey;
-}
-.filter-content .filter{
-    margin-left: 10px;
-}
-.filter-table button{
-    background: rgb(182, 219, 187);
-    padding: 3px 5px;
-    text-align: center;
-    border-radius: 7px;
+.filter-content {
+  width: 100%;
+  min-height: 450px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid grey;
 }
 
-.filter-table button:active{
-    background-color: rgb(57, 218, 57);
+.filter-content .filter {
+  margin-left: 10px;
 }
-table{
-    width: 100%;
-    margin: 3px 0 3px 10px
+
+.filter-table button {
+  background: rgb(182, 219, 187);
+  padding: 3px 5px;
+  text-align: center;
+  border-radius: 7px;
 }
-td{ 
-    width: 30%;
+
+.filter-table button:active {
+  background-color: rgb(57, 218, 57);
 }
-.filter-content .heading-btn{
-    text-align: center;
-    background: white;
-    padding: 4px;
-    margin: 10px 0 0 20px;
-    border-radius: 10px;
+
+table {
+  width: 100%;
+  margin: 3px 0 3px 10px
+}
+
+td {
+  width: 30%;
+}
+
+.filter-content .heading-btn {
+  text-align: center;
+  background: white;
+  padding: 4px;
+  margin: 10px 0 0 20px;
+  border-radius: 10px;
 }
 
 /* ----------------------------------------------------Media Query CSS Code -- Start------------------------------------------------------------------------------ */
+@media only screen and (min-width: 200px) and (max-width: 319px) {
+    .filter-content {
+    display: block;
+    width: 95%;
+    margin: 8px 4px 4px 8px;
+    position: static;
+    border: 1px solid gray;
+    background: whitesmoke;
+  }
 
-@media (max-width: 700px){
-    .filter-content{
-        display: block;
-        width: 95%;
-        margin: 8px 4px 4px 8px;
-        position: static;
-        border: 1px solid gray;
-        background: whitesmoke;
-    }
-    .filter{
-        font-size: 20px;
-    }
-    table{
-        width: 100%;
-        margin: 3px 0 3px 04px
-    }
-    .complete-filter-data{
-        width: 100%;
-        padding: 10px 0 0 20px;
-    }
-    .filter-content .heading-btn{
-        margin: 5px 0 0 55px;
-    }
+  .filter {
+    font-size: 20px;
+  }
+
+  table {
+    width: 100%;
+    margin: 3px 0 3px 04px
+  }
+
+  .complete-filter-data {
+    width: 100%;
+    padding: 10px 0 0 20px;
+  }
+
+  .filter-content .heading-btn {
+    margin: 5px 0 0 20px;
+  }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .filter-content {
+    display: block;
+    width: 95%;
+    margin: 8px 4px 4px 8px;
+    position: static;
+    border: 1px solid gray;
+    background: whitesmoke;
+  }
+
+  table {
+    width: 100%;
+    margin: 3px 0 3px 04px
+  }
+
+  .complete-filter-data {
+    width: 100%;
+    padding: 10px 0 0 20px;
+  }
+
+  .filter-content .heading-btn {
+    margin: 5px 0 0 55px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .filter-content .heading-btn {
+    margin: 5px 0 0 15px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .filter-content .heading-btn {
+    margin: 5px 0 0 100px;
+  }
+}
+
 /* ----------------------------------------------------Media Query CSS Code -- end------------------------------------------------------------------------------ */
