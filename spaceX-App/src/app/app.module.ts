@@ -8,8 +8,11 @@ import { FooterComponent } from './custom/components/footer/footer.component';
 import { SpaceXFilterComponent } from './custom/components/space-x-filter/space-x-filter.component';
 import { SpaceXDataComponent } from './custom/components/space-x-data/space-x-data.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SpaceXService } from './custom/services/space-x.service';
+import { LoaderService } from './custom/services/loader-service.service';
+import { LoaderInterceptorService } from './custom/services/loader-interceptor-service.service';
+import { LoaderComponent } from './custom/components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +20,20 @@ import { SpaceXService } from './custom/services/space-x.service';
     HeaderComponent,
     FooterComponent,
     SpaceXFilterComponent,
-    SpaceXDataComponent
+    SpaceXDataComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [SpaceXService],
+  providers: [SpaceXService,LoaderService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
